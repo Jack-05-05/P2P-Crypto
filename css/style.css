@@ -63,3 +63,11 @@ top:0;
 width:calc(100% - 6px);
 height:calc(100% - 6px)
 }
+.box{
+    width: 350px;
+    height: 250px;
+    background: tomato;
+    margin-right: 50px;
+    margin-top: 200px;
+    margin-left: 250px;
+}    
