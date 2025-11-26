@@ -63,4 +63,27 @@ top:0;
 width:calc(100% - 6px);
 height:calc(100% - 6px)
 }
- 
+
+ .round-button {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: #4CAF51; /* Зелёный цвет кнопки */
+  color: white; /* Цвет текста */
+  text-align: center;
+  line-height: 60px; /* Вертикальное выравнивание текста */
+  border-radius: 50%; /* Делаем круглую форму */
+  text-decoration: none; /* Убираем подчёркивание ссылки */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s ease; /* Плавная смена цвета при наведении */
+}
+
+.round-button:hover {
+  background-color: #45a050; /* Тёмнее при наведении */
+}
+
+.round-button:active {
+  transform: scale(0.95); /* Немного уменьшается при нажатии */
+}
+
