@@ -1,105 +1,244 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevTerminal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NaVolne — ресторан традиционной и европейской кухни в Дагестане. Свежие продукты, лёгкая атмосфера, вкус морского бриза." />
+  <title>NaVolne — Вкус морского бриза</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="terminal">
-        <div class="header">
-            <div class="glitch" data-text="user@devterminal:~$ ./start_portfolio.sh">
-                <span class="prompt">user@devterminal:~$</span> 
-                <span class="command">./start_portfolio.sh</span>
-            </div>
-            <div class="cursor"></div>
-        </div>
 
-        <div class="content">
-            <div class="line">
-                <span class="comment">// Инициализация портфолио...</span>
-            </div>
-            <div class="line">
-                <span class="keyword">const</span> <span class="function">developer</span> = {
-            </div>
-            <div class="line">
-                &nbsp;&nbsp;name: <span class="string">"Ваше Имя"</span>,
-            </div>
-            <div class="line">
-                &nbsp;&nbsp;specialization: <span class="string">"Full-Stack Developer"</span>,
-            </div>
-            <div class="line">
-                &nbsp;&nbsp;experience: <span class="number">3</span>
-            </div>
-            <div class="line">
-                };
-            </div>
-            <div class="line">
-                <span class="comment">// Портфолио готово к просмотру!</span>
-            </div>
-        </div>
-<div class="auth-buttons" id="authButtons">
-                    <button class="btn btn-login" onclick="openLogin()">Войти</button>
-                </div>
-        <div class="projects">
-            <div class="line">
-                <span class="prompt">user@devterminal:~$</span> 
-                <span class="command">ls projects/</span>
-            </div>
-            
-            <div class="project-grid">
-                <div class="project-card">
-                    <div class="prompt">project_001/</div>
-                    <h3>Веб-приложение</h3>
-                    <p>React + Node.js приложение с реальным временем</p>
-                    <div class="comment">// Технологии: JavaScript, Socket.io, MongoDB</div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="prompt">project_002/</div>
-                    <h3>Мобильное приложение</h3>
-                    <p>Кроссплатформенное приложение на React Native</p>
-                    <div class="comment">// Технологии: React Native, Redux, Firebase</div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="prompt">project_003/</div>
-                    <h3>API Сервис</h3>
-                    <p>Масштабируемый REST API с авторизацией</p>
-                    <div class="comment">// Технологии: Python, FastAPI, PostgreSQL</div>
-                </div>
-            </div>
-        </div>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo" aria-label="NaVolne — на главную">
+        Na<span>Volne</span>
+      </a>
 
-        <div class="contact">
-            <div class="line">
-                <span class="prompt">user@devterminal:~$</span> 
-                <span class="command">cat contacts.txt</span>
-            </div>
-            
-            <div class="contact-links">
-                <a href="islambabaew2@gmail.com" class="contact-link">Email</a>
-                <a href="https://github.com/Jack-05-05" class="contact-link">GitHub</a>
-                <a href="https://vk.com/sssrrtt" class="contact-link">VK</a>
-                <a href="https://vk.com/away.php?to=https%3A%2F%2Ft.me%2Fsskkr77&utf=1" class="contact-link">Telegram</a>
-            </div>
-        </div>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link">Главная</a></li>
+          <li><a href="#menu" class="nav__link">Меню</a></li>
+          <li><a href="#about" class="nav__link">О нас</a></li>
+          <li><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <a href="#reserve" class="btn btn--primary btn--header">Забронировать стол</a>
+
+      <!-- Мобильный бургер -->
+      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero__overlay"></div>
+    <div class="container hero__inner">
+      <p class="hero__eyebrow">Дагестан · Традиционная &amp; Европейская кухня</p>
+      <h1 class="hero__title">Вкус морского бриза<br>в каждой тарелке</h1>
+      <p class="hero__subtitle">
+        Свежие продукты, изысканные сочетания и атмосфера, в которой время замирает.
+        Почувствуйте свою волну удовольствия вместе с NaVolne.
+      </p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Открыть меню</a>
+        <a href="#about" class="btn btn--ghost">Узнать о нас</a>
+      </div>
     </div>
 
-    <script>
-        // Добавляем эффект печатания для контента
-        document.addEventListener('DOMContentLoaded', function() {
-            const lines = document.querySelectorAll('.line');
-            lines.forEach((line, index) => {
-                line.style.animationDelay = `${0.5 + index * 0.3}s`;
-            });
-        });
+    <!-- Декоративная волна -->
+    <div class="hero__wave" aria-hidden="true"></div>
+  </section>
 
-        // Эффект мерцания курсора
-        setInterval(() => {
-            const cursor = document.querySelector('.cursor');
-            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-        }, 500);
-    </script>
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__text">
+        <span class="section-label">О нас</span>
+        <h2 class="section-title">Добро пожаловать в NaVolne</h2>
+        <p>
+          Место, где оживают вкусы и замирает время. Наша концепция — абсолютная гармония
+          вкуса, эстетики и комфорта.
+        </p>
+        <p>
+          Мы создали чистую, лёгкую и по-настоящему красивую атмосферу, вдохновлённую
+          свежестью морского бриза, чтобы каждый ваш визит превращался в маленький отпуск.
+        </p>
+        <p>
+          Сердце NaVolne — это наша команда. Для вас готовят лучшие повара, которые превращают
+          отборные ингредиенты в кулинарные шедевры, а наш приветливый персонал позаботится
+          о том, чтобы вы чувствовали себя самым желанным гостем.
+        </p>
+        <p class="about__quote">Позвольте себе расслабиться и поймать свою волну удовольствия!</p>
+
+        <ul class="about__facts">
+          <li><strong>12+</strong><span>лет опыта</span></li>
+          <li><strong>80+</strong><span>блюд в меню</span></li>
+          <li><strong>4.9</strong><span>рейтинг гостей</span></li>
+        </ul>
+      </div>
+
+      <div class="about__image" role="img" aria-label="Интерьер ресторана NaVolne">
+        <div class="about__image-deco"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= POPULAR DISHES ================= -->
+  <section class="dishes" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label">Меню</span>
+        <h2 class="section-title">Популярные блюда</h2>
+        <p class="section-subtitle">
+          Свежие продукты, авторская подача и вкус, к которому хочется возвращаться.
+        </p>
+      </div>
+
+      <div class="dishes__grid">
+
+        <!-- Карточка 1 -->
+        <article class="dish-card">
+          <div class="dish-card__image dish-card__image--1" role="img" aria-label="Бургер с говяжьей котлетой"></div>
+          <div class="dish-card__body">
+            <h3 class="dish-card__title">Бургер с нежнейшей говяжьей котлетой и изысканным сочетанием соусов</h3>
+            <p class="dish-card__desc">
+              Мраморная говядина, бриошь, чеддер, карамелизированный лук и авторский соус.
+            </p>
+            <div class="dish-card__footer">
+              <span class="dish-card__price">690 ₽</span>
+              <button class="btn btn--primary btn--sm">Заказать</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 2 -->
+        <article class="dish-card">
+          <div class="dish-card__image dish-card__image--2" role="img" aria-label="Дагестанский хинкал"></div>
+          <div class="dish-card__body">
+            <h3 class="dish-card__title">Хинкал по-дагестански с отварной бараниной</h3>
+            <p class="dish-card__desc">
+              Пышное тесто, сочная баранина, чесночный соус и свежая зелень.
+            </p>
+            <div class="dish-card__footer">
+              <span class="dish-card__price">540 ₽</span>
+              <button class="btn btn--primary btn--sm">Заказать</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 3 -->
+        <article class="dish-card">
+          <div class="dish-card__image dish-card__image--3" role="img" aria-label="Паста с морепродуктами"></div>
+          <div class="dish-card__body">
+            <h3 class="dish-card__title">Паста с тигровыми креветками и сливочным соусом</h3>
+            <p class="dish-card__desc">
+              Лингвини, креветки, шпинат, пармезан и лёгкий сливочно-чесночный соус.
+            </p>
+            <div class="dish-card__footer">
+              <span class="dish-card__price">850 ₽</span>
+              <button class="btn btn--primary btn--sm">Заказать</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 4 -->
+        <article class="dish-card">
+          <div class="dish-card__image dish-card__image--4" role="img" aria-label="Стейк из мраморной говядины"></div>
+          <div class="dish-card__body">
+            <h3 class="dish-card__title">Стейк рибай с печёными овощами и розмарином</h3>
+            <p class="dish-card__desc">
+              Мраморная говядина, тимьян, чеснок, овощи-гриль и соус чимичурри.
+            </p>
+            <div class="dish-card__footer">
+              <span class="dish-card__price">1 890 ₽</span>
+              <button class="btn btn--primary btn--sm">Заказать</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 5 -->
+        <article class="dish-card">
+          <div class="dish-card__image dish-card__image--5" role="img" aria-label="Чуду с сыром"></div>
+          <div class="dish-card__body">
+            <h3 class="dish-card__title">Чуду с домашним сыром и зеленью</h3>
+            <p class="dish-card__desc">
+              Тонкое тесто, нежный сыр, сливочное масло и ароматная зелень.
+            </p>
+            <div class="dish-card__footer">
+              <span class="dish-card__price">320 ₽</span>
+              <button class="btn btn--primary btn--sm">Заказать</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 6 -->
+        <article class="dish-card">
+          <div class="dish-card__image dish-card__image--6" role="img" aria-label="Тирамису"></div>
+          <div class="dish-card__body">
+            <h3 class="dish-card__title">Тирамису с маскарпоне и свежими ягодами</h3>
+            <p class="dish-card__desc">
+              Классический итальянский десерт с эспрессо и ягодным акцентом.
+            </p>
+            <div class="dish-card__footer">
+              <span class="dish-card__price">410 ₽</span>
+              <button class="btn btn--primary btn--sm">Заказать</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESERVE CTA ================= -->
+  <section class="cta" id="reserve">
+    <div class="container cta__inner">
+      <h2>Забронируйте стол прямо сейчас</h2>
+      <p>Подарите себе маленький отпуск — мы позаботимся обо всём остальном.</p>
+      <a href="tel:+70000000000" class="btn btn--light">Забронировать стол</a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer" id="contacts">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#" class="logo logo--footer">Na<span>Volne</span></a>
+        <p class="footer__desc">
+          Ресторан традиционной и европейской кухни в сердце Дагестана.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+          <li><a href="mailto:hello@navolne.ru">hello@navolne.ru</a></li>
+          <li>г. Махачкала, ул. Приморская, 1</li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Часы работы</h4>
+        <ul>
+          <li>Пн–Чт: 11:00 – 23:00</li>
+          <li>Пт–Сб: 11:00 – 01:00</li>
+          <li>Вс: 12:00 – 23:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 NaVolne. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
